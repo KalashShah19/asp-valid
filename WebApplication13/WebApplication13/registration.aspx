@@ -28,7 +28,7 @@
         <asp:Label ID="Label2" runat="server" Text="Email"></asp:Label>
 
         <div>
-            <asp:TextBox ID="TBemail" runat="server"></asp:TextBox>
+            <asp:TextBox ID="TBemail" runat="server" TextMode="Email"></asp:TextBox>
             <br />
         </div>
         <asp:Label ID="Label3" runat="server" Text="Mobile Number"></asp:Label>
@@ -77,15 +77,6 @@
         </div>
         </div>
         <br />
-        <asp:RegularExpressionValidator ID="RegexName" runat="server" ErrorMessage="Name Should contain only Alphabats" ControlToValidate="TBname" ValidationExpression="/^[a-z ,.'-]+$/i" SetFocusOnError="True"></asp:RegularExpressionValidator>
-        <br />
-        <asp:RegularExpressionValidator ID="RegexNumber" runat="server" ErrorMessage="Mobile Number Should contain only 10 numbers" ControlToValidate="TBnumber" ValidationExpression="(?&lt;!\d)\d{10}(?!\d)"></asp:RegularExpressionValidator>
-        <br />
-        <asp:RegularExpressionValidator ID="RegexEmail" runat="server" ErrorMessage="Invalid Email Address" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="Tbemail"></asp:RegularExpressionValidator>
-        <br />
-        <asp:RegularExpressionValidator ID="RegexFees" runat="server" ErrorMessage="There Should be only 2 Decimal PLaces" ValidationExpression="^[0-9]*\.[0-9]{2}$ or ^[0-9]*\.[0-9][0-9]$" ControlToValidate="TBfees"></asp:RegularExpressionValidator>
-        <br />
-        <asp:RegularExpressionValidator ID="RegexPincode" runat="server" ErrorMessage="Invalid Pincode" ValidationExpression="(?&lt;!\d)\d{6}(?!\d)" ControlToValidate="TBpincode"></asp:RegularExpressionValidator>
         </center>
     </form>
 </body>
